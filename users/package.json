@@ -1,0 +1,24 @@
+{
+  "name": "iaf-users",
+  "version": "0.1.0",
+  "description": "A functional service managing users",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mfeineis/intents-and-facts.git"
+  },
+  "author": "Martin Feineis",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/mfeineis/intents-and-facts/issues"
+  },
+  "homepage": "https://github.com/mfeineis/intents-and-facts#readme",
+  "dependencies": {
+    "most": "^1.7.3",
+    "ramda": "^0.25.0",
+    "uuid": "^3.2.1"
+  }
+}
