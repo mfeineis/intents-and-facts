@@ -1,25 +1,16 @@
 const uuid = require("uuid/v4");
-const { map } = require("ramda");
 
-const { configureGateway } = require("./src/gateway");
+const intents = require("./src/intents");
+const { configurePortal } = require("./src/api");
 
-const intents = {
-    createUser: userId => ({
-        meta: {
-            correlationId: uuid(),
-        },
-        payload: {
-            userId,
-        },
-        type: "intent/createUser",
-    }),
-};
-
-const gateway = configureGateway({
+const portal = configurePortal({
     timeoutMs: 1000,
 });
 
-gateway.send(intents.createUser("bob"))
-    .catch(error => {
-        console.error(error));
-    });
+portal.send(intents.createUser({
+    userId: uuid(),
+    userName: "Bob",
+    hobbies: ["music", "ice-skating"],
+})).catch(error => {
+    console.error(error);
+});
