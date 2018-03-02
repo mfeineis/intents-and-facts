@@ -23,7 +23,7 @@ const userCreated = ({ payload, meta }) => ({
     type: "fact/userCreated",
 });
 
-export default {
+export {
     musicAsHobbyStated,
     unknownIntentTrapped,
     userCreated,

@@ -1,4 +1,4 @@
-const uuid = require("uuid/v4");
+import uuid from "uuid/v4";
 
 const createUser = payload => ({
     meta: {
@@ -16,7 +16,7 @@ const proposeMusicAsHobby = ({ meta, payload }) => ({
     type: "intent/proposeMusicAsHobby",
 });
 
-export default {
+export {
     createUser,
     proposeMusicAsHobby,
 };
